@@ -12,6 +12,13 @@ import { RouterLink, RouterView } from 'vue-router'
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
+
+      <v-btn icon>
+        <v-badge content="6" color="red-darken-2" size="x-small">
+          <v-icon icon="mdi-bell" color="blue-darken-4"></v-icon>
+        </v-badge>
+      </v-btn>
+
       <v-btn
         to="/login"
         variant="outlined"
