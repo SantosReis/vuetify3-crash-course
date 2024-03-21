@@ -22,7 +22,9 @@ import { RouterLink, RouterView } from 'vue-router'
     </v-toolbar>
 
     <v-main>
-      <RouterView />
+      <v-fade-transition>
+        <RouterView />
+      </v-fade-transition>
     </v-main>
   </v-app>
 </template>
