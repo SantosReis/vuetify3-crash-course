@@ -52,7 +52,12 @@ function submit() {
                 hide-details
               ></v-checkbox>
 
-              <v-btn color="red-darken-1" class="mt-2" type="submit" block>
+              <v-btn
+                color="red-darken-1 block"
+                class="mt-2"
+                type="submit"
+                block
+              >
                 <span>Submit</span>
               </v-btn>
             </v-form>
@@ -60,7 +65,7 @@ function submit() {
 
           <v-card-action>
             <div class="mx-4">
-              <v-btn block to="/register"> Register </v-btn>
+              <v-btn variant="outlined" block to="/register"> Register </v-btn>
             </div>
           </v-card-action>
         </v-card>

@@ -68,13 +68,7 @@ const notifications = [
         </v-list>
       </v-menu>
 
-      <v-btn
-        to="/login"
-        variant="outlined"
-        size="x-small"
-        color="pink-darken-4"
-        text="Login"
-      ></v-btn>
+      <v-btn variant="outlined" to="/login" size="small" text="Login"></v-btn>
     </v-toolbar>
 
     <v-main>
