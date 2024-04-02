@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+import { useTheme } from 'vuetify'
 
 const notifications = [
   {
@@ -33,6 +35,14 @@ const notifications = [
     color: 'orange',
   },
 ]
+
+const darkTheme = ref(true)
+const theme = useTheme()
+
+function changeTheme() {
+  darkTheme.value = !darkTheme.value
+  theme.global.name.value = darkTheme.value ? 'dark' : 'light'
+}
 </script>
 
 <template>
@@ -45,6 +55,12 @@ const notifications = [
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
+
+      <v-btn icon @click="changeTheme">
+        <v-icon
+          :icon="darkTheme ? 'mdi-weather-night' : 'mdi-weather-sunny'"
+        ></v-icon>
+      </v-btn>
 
       <v-menu transition="scale-transition">
         <template v-slot:activator="{ props }">
